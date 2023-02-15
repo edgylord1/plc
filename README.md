@@ -1,2 +1,2 @@
 # plc
-collection of simple plc program that i learned
+collection of simple plc's programs that i learned, som still incomplete and have errors.
