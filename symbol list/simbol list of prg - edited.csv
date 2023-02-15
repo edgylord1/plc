@@ -1,0 +1,9 @@
+Symbol,Address,Comment
+I_START,%I0.0,start process
+I_STOP,%I0.1,stop process
+I_SENSOR,%I0.5,detecting
+AUX_MOTOR,%M0,Motor auxilarry
+Q_MOTOR,%Q0.0,Motor 
+M_START,%M10,M_aux_Start
+M_STOP,%M11,M_aux_Stop
+M_SENSOR,%M12,M_aux_Sensor

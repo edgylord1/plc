@@ -3,12 +3,12 @@
   <ProjectVersion>2.7.0.0</ProjectVersion>
   <ManagementLevel>FunctLevelMan18_0</ManagementLevel>
   <Name>prg_control</Name>
-  <FullName>D:\all about work\learn PLC\prg_control.smbp</FullName>
+  <FullName>D:\all about work\learn PLC\plc\prg_control.smbp</FullName>
   <CurrentCultureName>en-GB</CurrentCultureName>
   <SoftwareConfiguration>
     <Pous>
       <ProgramOrganizationUnits>
-        <Name>PRG_Control</Name>
+        <Name>PRG INPUTS</Name>
         <SectionNumber>1</SectionNumber>
         <Rungs>
           <RungEntity>
@@ -20,22 +20,238 @@
                 <Symbol>I_START</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
-                <ChosenConnection>Down, Left, Right</ChosenConnection>
+                <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M10</Descriptor>
+                <Comment>M_aux_Start</Comment>
+                <Symbol>M_START</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M10</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
-                <Descriptor>%Q0.0</Descriptor>
-                <Comment />
-                <Symbol>Q_MOTOR</Symbol>
-                <Row>1</Row>
-                <Column>0</Column>
-                <ChosenConnection>Up, Left</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>NegatedContact</ElementType>
                 <Descriptor>%I0.1</Descriptor>
                 <Comment>stop process</Comment>
                 <Symbol>I_STOP</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M11</Descriptor>
+                <Comment>M_aux_Stop</Comment>
+                <Symbol>M_STOP</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    %I0.1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M11</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%M12</Descriptor>
+                <Comment>M_aux_Sensor</Comment>
+                <Symbol>M_SENSOR</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
                 <Row>0</Row>
                 <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
@@ -46,13 +262,73 @@
                 <Comment>detecting</Comment>
                 <Symbol>I_SENSOR</Symbol>
                 <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LDN   %I0.5</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %M12</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+        </Rungs>
+      </ProgramOrganizationUnits>
+      <ProgramOrganizationUnits>
+        <Name>PRG_Control</Name>
+        <SectionNumber>2</SectionNumber>
+        <Rungs>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M10</Descriptor>
+                <Comment>M_aux_Start</Comment>
+                <Symbol>M_START</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%Q0.0</Descriptor>
+                <Comment>Motor</Comment>
+                <Symbol>Q_MOTOR</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Up, Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M11</Descriptor>
+                <Comment>M_aux_Stop</Comment>
+                <Symbol>M_STOP</Symbol>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M12</Descriptor>
+                <Comment>M_aux_Sensor</Comment>
+                <Symbol>M_SENSOR</Symbol>
+                <Row>0</Row>
                 <Column>2</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%M0</Descriptor>
-                <Comment />
+                <Comment>Motor auxilarry</Comment>
                 <Symbol>AUX_MOTOR</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -103,7 +379,7 @@
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
-                <InstructionLine>LD    %I0.0</InstructionLine>
+                <InstructionLine>LD    %M10</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -111,11 +387,11 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ANDN  %I0.1</InstructionLine>
+                <InstructionLine>ANDN  %M11</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ANDN  %I0.5</InstructionLine>
+                <InstructionLine>ANDN  %M12</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -132,14 +408,14 @@
       </ProgramOrganizationUnits>
       <ProgramOrganizationUnits>
         <Name>PRG OUTPUT</Name>
-        <SectionNumber>2</SectionNumber>
+        <SectionNumber>3</SectionNumber>
         <Rungs>
           <RungEntity>
             <LadderElements>
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
                 <Descriptor>%M0</Descriptor>
-                <Comment />
+                <Comment>Motor auxilarry</Comment>
                 <Symbol>AUX_MOTOR</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
@@ -148,7 +424,7 @@
               <LadderEntity>
                 <ElementType>Coil</ElementType>
                 <Descriptor>%Q0.0</Descriptor>
-                <Comment />
+                <Comment>Motor</Comment>
                 <Symbol>Q_MOTOR</Symbol>
                 <Row>0</Row>
                 <Column>10</Column>
@@ -313,6 +589,25 @@
         <Address>%M0</Address>
         <Index>0</Index>
         <Symbol>AUX_MOTOR</Symbol>
+        <Comment>Motor auxilarry</Comment>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M10</Address>
+        <Index>10</Index>
+        <Symbol>M_START</Symbol>
+        <Comment>M_aux_Start</Comment>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M11</Address>
+        <Index>11</Index>
+        <Symbol>M_STOP</Symbol>
+        <Comment>M_aux_Stop</Comment>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M12</Address>
+        <Index>12</Index>
+        <Symbol>M_SENSOR</Symbol>
+        <Comment>M_aux_Sensor</Comment>
       </MemoryBit>
     </MemoryBits>
     <SystemBits>
@@ -1560,6 +1855,7 @@
             <Address>%Q0.0</Address>
             <Index>0</Index>
             <Symbol>Q_MOTOR</Symbol>
+            <Comment>Motor</Comment>
           </DiscretOutput>
           <DiscretOutput>
             <Address>%Q0.1</Address>
