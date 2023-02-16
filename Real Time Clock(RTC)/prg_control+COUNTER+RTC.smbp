@@ -8,6 +8,517 @@
   <SoftwareConfiguration>
     <Pous>
       <ProgramOrganizationUnits>
+        <Name>PRG SCHEDULES</Name>
+        <SectionNumber>0</SectionNumber>
+        <Rungs>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.STARTDAY := %MW20</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.STARTMONTH := %MW21</OperationExpression>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.ENDDAY := %MW22</OperationExpression>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.ENDMONTH := %MW23</OperationExpression>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>3</Row>
+                <Column>7</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>2</Row>
+                <Column>7</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>1</Row>
+                <Column>7</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.STARTDAY := %MW20 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.STARTMONTH := %MW21 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.ENDDAY := %MW22 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.ENDMONTH := %MW23 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>SCHEDULE DATE</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.STARTHOUR := %MW24</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.STARTMIN := %MW25</OperationExpression>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.ENDHOUR := %MW26</OperationExpression>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%SCH0.ENDMIN := %MW27</OperationExpression>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>3</Row>
+                <Column>6</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>2</Row>
+                <Column>6</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>1</Row>
+                <Column>6</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.STARTHOUR := %MW24 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.STARTMIN := %MW25 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.ENDHOUR := %MW26 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %SCH0.ENDMIN := %MW27 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>SCHEDULE TIME</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Symbol />
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Symbol />
+                <Row>1</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Symbol />
+                <Row>1</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Symbol />
+                <Row>2</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Symbol />
+                <Row>2</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Symbol />
+                <Row>3</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Symbol />
+                <Row>3</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines />
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+        </Rungs>
+      </ProgramOrganizationUnits>
+      <ProgramOrganizationUnits>
         <Name>PRG RTC</Name>
         <SectionNumber>1</SectionNumber>
         <Rungs>
@@ -1885,7 +2396,7 @@
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Operation</ElementType>
-                <OperationExpression>%MW20 := %MW20 + 1</OperationExpression>
+                <OperationExpression>%MW201 := %MW201 + 1</OperationExpression>
                 <Row>0</Row>
                 <Column>9</Column>
                 <ChosenConnection>Left</ChosenConnection>
@@ -1922,7 +2433,7 @@
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Operation</ElementType>
-                <OperationExpression>%MW20 := 0</OperationExpression>
+                <OperationExpression>%MW201 := 0</OperationExpression>
                 <Row>1</Row>
                 <Column>9</Column>
                 <ChosenConnection>Left</ChosenConnection>
@@ -1996,11 +2507,11 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>RISING1</InstructionLine>
+                <InstructionLine>RISING2</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW20 := %MW20 + 1 ]</InstructionLine>
+                <InstructionLine>[ %MW201 := %MW201 + 1 ]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -2012,7 +2523,7 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW20 := 0 ]</InstructionLine>
+                <InstructionLine>[ %MW201 := 0 ]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
@@ -2512,7 +3023,7 @@
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
-                <InstructionLine>LD    1</InstructionLine>
+                <InstructionLine>LD  1</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -2520,15 +3031,15 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW2 := %MW45 * 60 + %MW46 ]</InstructionLine>
+                <InstructionLine>[%MW2 := %MW45 * 60 + %MW46]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW3 := %MW12 * 60 + %MW13 ]</InstructionLine>
+                <InstructionLine>[%MW3 := %MW12 * 60 + %MW13]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW4 := %MW14 * 60 + %MW15 ]</InstructionLine>
+                <InstructionLine>[%MW4 := %MW14 * 60 + %MW15]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -2536,15 +3047,15 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>AND   [ %MW2 &gt; %MW3 ]</InstructionLine>
+                <InstructionLine>AND [ %MW2 &gt; %MW3 ]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>AND   [ %MW2 &lt; %MW4 ]</InstructionLine>
+                <InstructionLine>AND [ %MW2 &lt; %MW4 ]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ST    %M1</InstructionLine>
+                <InstructionLine>ST  %M1</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
@@ -2838,6 +3349,36 @@
         <Address>%M21</Address>
         <Index>21</Index>
         <Symbol>IND_CONTROL_REACHED</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M22</Address>
+        <Index>22</Index>
+        <Symbol>CFG_SCH_MONDAY</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M23</Address>
+        <Index>23</Index>
+        <Symbol>CFG_SCH_TUESDAY</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M24</Address>
+        <Index>24</Index>
+        <Symbol>CFG_SCH_WEDNESDAY</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M25</Address>
+        <Index>25</Index>
+        <Symbol>CFG_SCH_THURSDAY</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M26</Address>
+        <Index>26</Index>
+        <Symbol>CFG_SCH_FRIDAY</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M27</Address>
+        <Index>27</Index>
+        <Symbol>CFG_SCH_SATURDAY</Symbol>
       </MemoryBit>
       <MemoryBit>
         <Address>%M80</Address>
@@ -3989,7 +4530,42 @@
       <MemoryWord>
         <Address>%MW20</Address>
         <Index>20</Index>
-        <Symbol>IND_MOTOR_TIME</Symbol>
+        <Symbol>CFG_SCH_STARTDAY</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW21</Address>
+        <Index>21</Index>
+        <Symbol>CFG_SCH_STARTMONTH</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW22</Address>
+        <Index>22</Index>
+        <Symbol>CFG_SCH_ENDDAY</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW23</Address>
+        <Index>23</Index>
+        <Symbol>CFG_SCH_ENDMONTH</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW24</Address>
+        <Index>24</Index>
+        <Symbol>CFG_SCH_STARTHOUR</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW25</Address>
+        <Index>25</Index>
+        <Symbol>CFG_SCH_STARTMIN</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW26</Address>
+        <Index>26</Index>
+        <Symbol>CFG_SCH_ENDHOUR</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW27</Address>
+        <Index>27</Index>
+        <Symbol>CFG_SCH_ENDMIN</Symbol>
       </MemoryWord>
       <MemoryWord>
         <Address>%MW30</Address>
@@ -4058,7 +4634,16 @@
     <Drums />
     <ShiftBitRegisters />
     <StepCounters />
-    <ScheduleBlocks />
+    <ScheduleBlocks>
+      <ScheduleBlock>
+        <Address>%SCH0</Address>
+        <Index>0</Index>
+        <Configured>true</Configured>
+        <OutputBit>%M1</OutputBit>
+        <StartDate>2012-01-01T00:00:00</StartDate>
+        <EndDate>2012-01-01T00:00:00</EndDate>
+      </ScheduleBlock>
+    </ScheduleBlocks>
     <Pids />
     <MessageBlocks>
       <MessageBlock>
