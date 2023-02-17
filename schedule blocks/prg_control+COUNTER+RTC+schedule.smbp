@@ -2,8 +2,8 @@
 <ProjectDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectVersion>2.7.0.0</ProjectVersion>
   <ManagementLevel>FunctLevelMan18_0</ManagementLevel>
-  <Name>prg_control+COUNTER+RTC</Name>
-  <FullName>D:\all about work\learn PLC\plc\Real Time Clock(RTC)\prg_control+COUNTER+RTC.smbp</FullName>
+  <Name>prg_control+COUNTER+RTC+schedule</Name>
+  <FullName>D:\all about work\learn PLC\plc\schedule blocks\prg_control+COUNTER+RTC+schedule.smbp</FullName>
   <CurrentCultureName>en-GB</CurrentCultureName>
   <SoftwareConfiguration>
     <Pous>
