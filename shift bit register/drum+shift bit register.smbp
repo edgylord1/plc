@@ -2,8 +2,8 @@
 <ProjectDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectVersion>2.7.0.0</ProjectVersion>
   <ManagementLevel>FunctLevelMan18_0</ManagementLevel>
-  <Name>simple drum to turn on 4 pumps upgraded</Name>
-  <FullName>D:\all about work\learn PLC\plc\drum\simple drum to turn on 4 pumps upgraded.smbp</FullName>
+  <Name>drum+shift bit register</Name>
+  <FullName>D:\all about work\learn PLC\plc\shift bit register\drum+shift bit register.smbp</FullName>
   <CurrentCultureName>en-GB</CurrentCultureName>
   <SoftwareConfiguration>
     <Pous>
@@ -14,126 +14,67 @@
           <RungEntity>
             <LadderElements>
               <LadderEntity>
-                <ElementType>Drum</ElementType>
-                <Descriptor>%DR0</Descriptor>
-                <Comment>DRUM TO PUMPS</Comment>
-                <Symbol />
-                <Row>0</Row>
-                <Column>3</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Coil</ElementType>
-                <Descriptor>%M0</Descriptor>
+                <ElementType>ShiftBitRegister</ElementType>
+                <Descriptor>%SBR0</Descriptor>
                 <Comment />
-                <Symbol>FULL</Symbol>
+                <Symbol>SHIFT_BIT</Symbol>
                 <Row>0</Row>
-                <Column>10</Column>
+                <Column>2</Column>
                 <ChosenConnection>Left</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
-                <ElementType>Line</ElementType>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.1</Descriptor>
                 <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>9</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>8</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>7</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>6</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>5</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>0</Row>
-                <Column>2</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>1</Row>
-                <Column>1</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Comment />
-                <Symbol />
-                <Row>1</Row>
-                <Column>2</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>RisingEdge</ElementType>
-                <Descriptor>%I0.0</Descriptor>
-                <Comment />
-                <Symbol>MODE</Symbol>
-                <Row>1</Row>
-                <Column>0</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>RisingEdge</ElementType>
-                <Descriptor>%I0.0</Descriptor>
-                <Comment />
-                <Symbol>MODE</Symbol>
+                <Symbol>RESET</Symbol>
                 <Row>0</Row>
                 <Column>0</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
-                <Descriptor>%M0</Descriptor>
+                <Descriptor>%I0.2</Descriptor>
                 <Comment />
-                <Symbol>FULL</Symbol>
+                <Symbol>SHIFT_LEFT</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.3</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_RIGHT</Symbol>
+                <Row>2</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
                 <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
                 <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
-                <InstructionLine>BLK   %DR0</InstructionLine>
+                <InstructionLine>BLK   %SBR0</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>LDR   %I0.0</InstructionLine>
-                <Comment />
-              </InstructionLineEntity>
-              <InstructionLineEntity>
-                <InstructionLine>AND   %M0</InstructionLine>
+                <InstructionLine>LD    %I0.1</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
@@ -141,27 +82,427 @@
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>LDR   %I0.0</InstructionLine>
+                <InstructionLine>LD    %I0.2</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>U</InstructionLine>
+                <InstructionLine>CU</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>OUT_BLK</InstructionLine>
+                <InstructionLine>LD    %I0.3</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>LD    F</InstructionLine>
-                <Comment />
-              </InstructionLineEntity>
-              <InstructionLineEntity>
-                <InstructionLine>ST    %M0</InstructionLine>
+                <InstructionLine>CD</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
                 <InstructionLine>END_BLK</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>RisingEdge</ElementType>
+                <Descriptor>%I0.0</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>SetCoil</ElementType>
+                <Descriptor>%SBR0.0</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_BIT.0</Symbol>
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LDR   %I0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>S     %SBR0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Short</ElementType>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%SBR0.0</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_BIT.0</Symbol>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.0</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%SBR0.1</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_BIT.1</Symbol>
+                <Row>1</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.1</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>1</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%SBR0.2</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_BIT.2</Symbol>
+                <Row>2</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.2</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>2</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>2</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%SBR0.3</Descriptor>
+                <Comment />
+                <Symbol>SHIFT_BIT.3</Symbol>
+                <Row>3</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Coil</ElementType>
+                <Descriptor>%Q0.3</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>3</Row>
+                <Column>10</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>3</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>3</Row>
+                <Column>2</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>2</Row>
+                <Column>2</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>1</Row>
+                <Column>2</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD    1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>MPS</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>AND   %SBR0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>MRD</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>AND   %SBR0.1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>MRD</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>AND   %SBR0.2</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.2</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>MPP</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>AND   %SBR0.3</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.3</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
@@ -176,7 +517,7 @@
     <Subroutines />
     <WatchLists>
       <WatchListEntity>
-        <Name>table_drums</Name>
+        <Name>TABLE_SHIFT BIT</Name>
         <WatchListItemEntities>
           <WatchListItemEntity>
             <Address>%Q0.0</Address>
@@ -199,29 +540,24 @@
             <ValueRepresentation>BoolNumeric</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%I0.0</Address>
+            <Address>%SBR0.0</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>BoolNumeric</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%M0</Address>
+            <Address>%SBR0.1</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>BoolNumeric</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%I0.1</Address>
+            <Address>%SBR0.2</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>BoolNumeric</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%DR0.F</Address>
+            <Address>%SBR0.3</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>BoolNumeric</ValueRepresentation>
-          </WatchListItemEntity>
-          <WatchListItemEntity>
-            <Address>%DR0.S</Address>
-            <IsTraced>false</IsTraced>
-            <ValueRepresentation>Decimal</ValueRepresentation>
           </WatchListItemEntity>
         </WatchListItemEntities>
       </WatchListEntity>
@@ -239,23 +575,14 @@
     <TimersMemoryAllocation />
     <CountersMemoryAllocation />
     <RegistersMemoryAllocation />
-    <DrumsMemoryAllocation>
-      <ForcedCount>1</ForcedCount>
-    </DrumsMemoryAllocation>
+    <DrumsMemoryAllocation />
     <SbrsMemoryAllocation />
     <ScsMemoryAllocation />
     <FcsMemoryAllocation />
     <SchsMemoryAllocation />
     <HscsMemoryAllocation />
     <PtosMemoryAllocation />
-    <MemoryBits>
-      <MemoryBit>
-        <Address>%M0</Address>
-        <Index>0</Index>
-        <Symbol>FULL</Symbol>
-        <Used>true</Used>
-      </MemoryBit>
-    </MemoryBits>
+    <MemoryBits />
     <SystemBits>
       <MemoryBit>
         <Address>%S0</Address>
@@ -1321,345 +1648,15 @@
     <Counters />
     <FastCounters />
     <Registers />
-    <Drums>
-      <Drum>
-        <Address>%DR0</Address>
+    <Drums />
+    <ShiftBitRegisters>
+      <ShiftBitRegister>
+        <Address>%SBR0</Address>
         <Index>0</Index>
-        <Comment>DRUM TO PUMPS</Comment>
-        <Bits>
-          <BitForDrum>
-            <Index>0</Index>
-            <Steps>
-              <Step />
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-            <Outputs>%Q0.0</Outputs>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>1</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-            <Outputs>%Q0.1</Outputs>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>2</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-            <Outputs>%Q0.2</Outputs>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>3</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Used>true</Used>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-            <Outputs>%Q0.3</Outputs>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>4</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>5</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>6</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>7</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>8</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>9</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>10</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>11</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>12</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>13</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>14</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-          <BitForDrum>
-            <Index>15</Index>
-            <Steps>
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step />
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-              <Step>
-                <Available>false</Available>
-              </Step>
-            </Steps>
-          </BitForDrum>
-        </Bits>
-        <StepsNumber>5</StepsNumber>
-      </Drum>
-    </Drums>
-    <ShiftBitRegisters />
+        <Symbol>SHIFT_BIT</Symbol>
+        <LastWritenBit>2</LastWritenBit>
+      </ShiftBitRegister>
+    </ShiftBitRegisters>
     <StepCounters />
     <ScheduleBlocks />
     <Pids />
@@ -1781,7 +1778,6 @@
           <DiscretInput>
             <Address>%I0.0</Address>
             <Index>0</Index>
-            <Symbol>MODE</Symbol>
             <DIFiltering>DIFilterings4ms</DIFiltering>
             <DILatch>DILatchNo</DILatch>
           </DiscretInput>
@@ -1795,12 +1791,14 @@
           <DiscretInput>
             <Address>%I0.2</Address>
             <Index>2</Index>
+            <Symbol>SHIFT_LEFT</Symbol>
             <DIFiltering>DIFilterings4ms</DIFiltering>
             <DILatch>DILatchNo</DILatch>
           </DiscretInput>
           <DiscretInput>
             <Address>%I0.3</Address>
             <Index>3</Index>
+            <Symbol>SHIFT_RIGHT</Symbol>
             <DIFiltering>DIFilterings4ms</DIFiltering>
             <DILatch>DILatchNo</DILatch>
           </DiscretInput>
